@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel blog</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            height: auto;
+            width: 100%;
+            margin: 0 auto;
+            border: 15px solid rgb(31, 53, 63);
+            padding: 20px;
+            background-color: rgb(31, 53, 63);
+            text-align: center;
+            position: relative;
+        }
+        .navbar {
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            opacity: 1;
+        }
+        .menu ul {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+        }
+        .menu ul li {
+            margin: 0 10px;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: #efe9e9;
+            padding: 5px 12px;
+            letter-spacing: 5px;
+            font-size: 18px;
+            border: 2px solid #f6f2f2;
+            border-radius: 12px;
+            margin-top: 10em;
+        }
+        .menu ul li a:hover {
+            border-bottom: 4px solid #f3f706;
+            transition: 0.4s;
+            box-shadow: 0 4px 8px rgb(250, 233, 0);
+            transform: scale(1.5);
+            background-color: rgb(24, 23, 23);
+        }
+        .signup a {
+            text-decoration: none;
+            color: #f3f0f0;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 12px;
+            padding: 12px 30px;
+            border: 2px solid #f6f2f2;
+        }
+        .signup a:hover {
+            background-color: rgb(254, 252, 252);
+            transition: 0.6s;
+        }
+        
+        .contact-info {
+            color: #efe9e9;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .contact-info ul {
+            margin-top: 20px;
+        }
+        .contact-info ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .contact-info ul li a {
+            color: #efe9e9;
+        }
+        .logo img {
+            width: 100px;
+            height: auto;
+            border-radius: 15px;
+            border-bottom: #fefbfb;
+            border: 2px solid #fcf8f8;
+            margin-left: -500px;
+            margin-top: 1rem;
+        }
+
+        
+        .tours {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 60px;
+            justify-content: 50px;
+            height: 50%;
+            gap: 5em;
+            
+        }
+
+        .places {
+            margin: 0 10px;
+        }
+
+        .places img {
+            width: 300px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+
+        .places img:hover {
+            transform: scale(1.1);
+        }
+
+       
+        .unique-text {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            color: #f3f0f0;
+            font-family: 'Pacifico', cursive;
+            animation: bounceText 2s infinite;
+        }
+
+        
+        @keyframes bounceText {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+            .menu ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+            .logo img {
+                margin-left: 0;
+            }
+            .tours {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        footer {
+            background: var(--exDark);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.4rem;
+        }
+        .social-links a {
+            border: 2px solid #fff;
+            color: #fff;
+            display: block;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            text-decoration: none;
+            margin: 0 0.3rem;
+            transition: all 0.5s ease;
+        }
+        .social-links a:hover {
+            background: #fff;
+            color: var(--exDark);
+        }
+        footer span {
+            margin-top: 1rem;
+            display: block;
+            font-family: var(--Playfair);
+            letter-spacing: 2px;
+        }
+        @media screen and (max-width: 768px){
+        .logo{
+          display: none;
+        }
+
+        .navbar{
+          display: flex;
+        }
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="main.jpg" alt="HALSELE HILL Logo">
+            </div>
+            <div class="menu">
+                <ul>
+                     <li><a href="../MIDTERM/index.html"></i> HOME</a></li>
+                    <li><a href="../MIDTERM/BLOG.html"></i> BLOG</a></li>
+                    <li><a href="../MIDTERM/About.html"></i> ABOUT</a></li> 
+                </ul>
+            </div>
+        </div>
+        
+    <div class="tours">
+        <div class="places" onclick="openPopup('COVER1.jpg')">
+            <img src="cover5.png">
+        </div>
+        <div class="places" onclick="openPopup('COVER2.jpg')">
+            <img src="cover5.png">
+        </div>
+        <div class="places" onclick="openPopup('COVER3.jpg')">
+            <img src="cover5.png">
+        </div>
+    </div>
+
+  
+    <div class="unique-text"></div>
+        <section class="contact-info">
+            <h2>Information</h2>
+            <p>Have you been to Halseley? The overlooking tourist spot in Tiningalan, Publacion, Sugbongcogon, Misamis Oriental that has endeared many visitors due to its beautiful cascading landscape, tranquil atmosphere, and breathtaking sceneries will soon be implementing major improvements with the construction of an infinity pool, pool bar, restaurant, villas, and a whole new resort-like ambiance. A perfect fuel to your mood is food! Cafe Maria located inside Halseley Hill will surely satisfy your cravings + the perfect view with your loved ones.</p>
+            <ul>
+                <li><i class="fas fa-envelope"></i> Email: HalseleyHill@example.com</li>
+                <li><i class="fas fa-phone"></i> Phone: +1234567890</li>
+                <li><i class="fas fa-map-marker-alt"></i> Address: 123 Main Street, City, Country</li>
+            </ul>
+        </section>
+        <footer>
+            <div class="social-links">
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+            </div>
+            <span>&copy; 2024 HANSELEY HILL. All rights reserved.</span>
+          </footer>
+    </div>
+</body>
+</html>
