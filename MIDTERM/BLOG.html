@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel blog</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            
+            margin: 0;
+            box-sizing: border-box;
+          
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            height: 100vh;
+            width: -102px;
+            margin: -1em;
+            border: 15px solid rgb(31, 53, 63);
+            padding: 20px;
+            background-color: rgb(31, 53, 63);
+            opacity: 2px;
+            width: 100;
+            margin: -40px; 
+            border: 15px solid rgb(31, 53, 63); 
+            padding: 20px; 
+            background-color: rgb(31, 53, 63); 
+            opacity: 2px;
+        }
+        .navbar {
+            height: 88px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            opacity: 10px;
+            margin-top: 5px;
+            gap: 5px;
+        }
+        .menu ul {
+            display: flex;
+            align-items: center;
+            gap:5rem;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: #efe9e9;
+            padding: 5px 12px;
+            letter-spacing: 5px;
+            font-size: 18px;
+            border: 2px solid #f6f2f2;
+            border-radius: 12px;
+            
+            
+        }
+        .menu ul li a:hover {
+            border-bottom: 4px solid #ffb300;
+            transition: 0.4s;
+            box-shadow: 0 4px 8px rgb(250, 233, 0);
+            background-color: rgb(24, 23, 23);
+        }
+        .signup a {
+            text-decoration: none;
+            color: #f3f0f0;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 12px;
+            padding: 12px 30px;
+            border: 2px solid #f6f2f2;
+            margin-top: auto;
+
+        }
+        .signup a:hover {
+            background-color: rgb(254, 252, 252);
+            transition: 0.6s;
+            margin-top: auto;
+        }
+        .body {
+            height: 80vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-image: url(COVER.jpg);
+            background-position: center;
+            background-size: cover;
+ 
+        }
+        .heading {
+
+            font-size: 25px;
+            font-weight: arial;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: 2028px;
+            line-height: 10,5px;
+            color: #fff;
+            letter-spacing: 1.5px;
+            text-align: justify;
+            margin-right: auto;
+            margin-left: 45%;
+            width: 50%;
+            padding: 20px;
+            text-align: left;
+        }
+        .logo img {
+            width: 100px; 
+            height: auto;
+            border-radius: 15px;
+            border-bottom: #fefbfb;
+            border: 2px solid #fcf8f8;
+            margin-left: -200px;
+            margin-top: 20%;
+        }
+        .contact-info {
+            color: #efe9e9; 
+            text-align: center; 
+            font-size: 50px;
+        }
+
+       
+        .contact-info h2 {
+            animation: slideIn 2s infinite alternate;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-10px); 
+            }
+            to {
+                transform: translateY(10px); 
+            }
+        }
+
+       
+        .contact-info ul {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-info ul a {
+            color: #fff; 
+            font-size: 30px;
+            margin: 0 10px;
+            border-color: #ffb300;
+        }
+
+        .contact-info ul a:hover {
+            transform: scale(1.2); 
+            
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #030303;
+            min-width: 160px;
+           
+            z-index: 1;
+            
+        }
+
+        .dropdown-content a {
+            
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .logo{
+            margin-top: 20px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 38%;
+            background: var(--exDark);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+      }
+      .social-links {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1.4rem;
+      }
+      .social-links a {
+        border: 2px solid #fff;
+        color: #fff;
+        display: block;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        text-decoration: none;
+        margin: 0 0.3rem;
+        transition: all 0.5s ease;
+      }
+      .social-links a:hover {
+        background: #fff;
+        color: var(--exDark);
+      }
+      footer span {
+        margin-top: 1rem;
+        display: block;
+        font-family: var(--Playfair);
+        letter-spacing: 2px;
+      }
+      @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .menu ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .menu ul li {
+                margin-bottom: 10px;
+            }
+            .signup a {
+                margin-top: 20px;
+            }
+            .logo img {
+                margin-left: 0;
+            }
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="main.jpg" alt="Logo">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="../MIDTERM/index.html"></i> HOME</a></li>
+                    <li><a href="../MIDTERM/BLOG.html"></i> BLOG</a></li>
+                    <li><a href="../MIDTERM/About.html"></i> ABOUT</a></li> 
+                    <li>
+                        <div class="dropdown">
+                            <a href="javascript:void(0)" class="blog-dropdown"><i class="fas fa-BLOG"></i> MY BLOG</a>
+                            <div class="dropdown-content">
+                                <a href="../MIDTERM/Mfoods.html">My Food Blog</a>
+                                <a href="../MIDTERM/Mride.html">My Travel Blog</a>
+                            </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    
+        <section class="contact-info">
+            <h2>WELCOME TO HALSEYLE BLOG</h2>
+           
+        </section>
+        <footer>
+            <div class="social-links">
+              <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.pinterest.com"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <span>&copy; 2024 HANSELEY HILL. All rights reserved.</span>
+          </footer>
+    </div>
+</body>
+</html>

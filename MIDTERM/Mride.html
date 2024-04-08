@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel blog</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+           
+            margin: 0;
+            box-sizing: border-box;
+           
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            height: auto; 
+            width: 100%;
+            margin: 0 auto; 
+            border: 15px solid rgb(31, 53, 63); 
+            padding: 20px; 
+            background-color: rgb(31, 53, 63); 
+            opacity: 2px;
+        }
+        .navbar {
+            height: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 20px;
+            opacity: 10px;
+            gap: 3rem;
+            top: 10rem;
+        }
+        .menu ul {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-right: 15em;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: #efe9e9;
+            padding: 5px 12px;
+            letter-spacing: 2px;
+            font-size: 18px;
+            border: 2px solid #f6f2f2;
+            border-radius: 12px;
+            margin-left: 0%;
+        }
+        .menu ul li a:hover {
+            border-bottom: 4px solid #f8c00a;
+            transition: 0.4s;
+            box-shadow: 0 4px 8px rgb(250, 233, 0);
+            background-color: rgb(24, 23, 23);
+        }
+        .signup a {
+            text-decoration: none;
+            color: #f3f0f0;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 12px;
+            padding: 12px 30px;
+            border: 2px solid #f6f2f2;
+            margin-top: auto;
+        }
+        .signup a:hover {
+            background-color: rgb(254, 252, 252);
+            transition: 0.6s;
+            margin-top: auto;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            margin-bottom: 20px; 
+        }
+
+        .video-container video {
+            width: 70%; 
+            height: 80%; 
+            border-radius: 10px; 
+            border: 2px solid #ffffff; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px; 
+        }
+
+        .image-section .image-container {
+            width: 30%;
+            text-align: center;
+            cursor: pointer; 
+            position: relative; 
+            overflow: hidden;
+        }
+
+        .image-section .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid white;
+            transition: transform 0.5s ease;
+        }
+
+       
+        .image-section .image-container img:hover {
+            transform: scale(1.1); 
+        }
+
+        .logo img {
+            width: 100px; 
+            height: auto;
+            border-radius: 15px;
+            border-radius: 15px;
+            border-bottom: #fefbfb;
+            border: 2px solid #fcf8f8;
+            margin-left: -10px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #030303;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+         
+            color: black;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            overflow: auto;
+        }
+
+        .popup img {
+            display: block;
+            margin: auto;
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+        }
+                    footer {
+                background: var(--exDark);
+                color: #fff;
+                text-align: center;
+                padding: 2rem 0;
+            }
+            * {
+                padding: 0;
+                margin: 0;
+                font-family: var(--Quicksand);
+            }
+            @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+            .menu ul {
+                flex-direction: column;
+                align-items: center;
+                margin: 1rem 0;
+            }
+            .menu ul li a {
+                margin: 0.5rem 0;
+            }
+            .image-section .image-container {
+                width: 100%;
+            }
+        }
+        .image-section .image-container {
+    width: 30%;
+    text-align: center;
+    cursor: pointer; 
+    position: relative; 
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.image-section .image-container:hover {
+    transform: scale(1.1); 
+}
+.video-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            margin-bottom: 20px;
+        }
+
+        .video-container video {
+            width: 70%;
+            height: 80%;
+            border-radius: 10px;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .intro-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #ffffff;
+            z-index: 2;
+        }
+
+        .intro-overlay h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .intro-overlay p {
+            font-size: 1.5rem;
+        }
+        @media screen and (max-width: 768px){
+        .logo{
+          display: none;
+        }
+
+        .navbar{
+          display: flex;
+        }
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="main.jpg" alt="Logo">
+            </div>
+            
+            <div class="menu">
+                <ul>
+                     <li><a href="../MIDTERM/index.html"></i> HOME</a></li>
+                    <li><a href="../MIDTERM/BLOG.html"></i> BLOG</a></li>
+                    <li><a href="../MIDTERM/About.html"></i> ABOUT</a></li> 
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="blog-dropdown"><i class="fas fa-BLOG"></i> MY BLOG</a>
+                        <div class="dropdown-content">
+                            <a href="../MIDTERM/Mfoods.html">My Food Blog</a>
+                            <a href="../MIDTERM/Mride.html">My Travel Blog</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       
+        <div class="video-container">
+            <video width="50%" height="50%" controls>
+                <source src="halss.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="image-section">
+            <div class="image-container">
+                <img src="ako.png" alt="Image 1" onclick="openPopup('COVER1.jpg')">
+            </div>
+            <div class="image-container">
+                <img src="ako.png" alt="Image 2" onclick="openPopup('COVER2.jpg')">
+            </div>
+            <div class="image-container">
+                <img src="ako.png" alt="Image 3" onclick="openPopup('COVER3.jpg')">
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="popup" id="popup">
+        <img src="" alt="Popup Image" id="popupImg">
+    </div>
+
+    <script>
+        function openPopup(imageSrc) {
+            var popup = document.getElementById('popup');
+            var popupImg = document.getElementById('popupImg');
+            popup.style.display = 'block';
+            popupImg.src = imageSrc;
+        }
+
+        var popup = document.getElementById('popup');
+        popup.addEventListener('click', function(event) {
+            if (event.target === this) {
+                this.style.display = 'none';
+            }
+        });
+    </script>
+     <!-- footer -->
+     <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+        </div>
+        <span>&copy; 2024 HANSELEY HILL. All rights reserved.</span>
+      </footer>
+      <!-- end of footer -->
+      <style>
+        footer {
+            background: #030303;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+          }
+          .social-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.4rem;
+          }
+          .social-links a {
+            border: 2px solid #fff;
+            color: #fff;
+            display: block;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            text-decoration: none;
+            margin: 0 0.3rem;
+            transition: all 0.5s ease;
+          }
+          .social-links a:hover {
+            background: #fff;
+            color: var(--exDark);
+          }
+          footer span {
+            margin-top: 1rem;
+            display: block;
+            font-family: var(--Playfair);
+            letter-spacing: 2px;
+          }
+         </style>
+</body>
+</html>
